@@ -38,3 +38,5 @@ lib/generated_plugin_registrant.dart
 # My added ignores ############################
 
 ios/Build/
+ios/UnityExport/
+unity/ARDemoApp/
