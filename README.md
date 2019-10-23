@@ -6,7 +6,8 @@ Testing out different ways of getting Unity to run in a Flutter app.
 
 https://github.com/snowballdigital/flutter-unity-view-widget
 
-Steps 
+Steps to get the AR Demo working 
+1. in `pubspec.yaml` dependencies, add `flutter_unity_widget:`
 1. copy `ARDemoApp` from `flutter-unity-view-widget/example/unity/` to `unity/`
 1. open `ARDemoApp` with Unity 
 1. ensure at least one scene is selected 
@@ -18,9 +19,10 @@ Steps
 ```ObjC
 #import "UnityUtils.h" 
 ```
-9. add to `AppDelegate.swift` before the `GeneratePluginRegistrant` call:
+10. add to `AppDelegate.swift` before the `GeneratePluginRegistrant` call:
 ```Swift
 InitArgs(CommandLine.argc, CommandLine.unsafeArgv)
 ```
-10. opt-in to embedded views preview, by adding the key `io.flutter.embedded_views_preview` with value `YES` to `Info.plist`
-11. add another entry to `Info.plist` with key: `Privacy - Camera Usage Description` and value: `$(PRODUCT_NAME) uses Cameras`
+11. opt-in to embedded views preview, by adding the key `io.flutter.embedded_views_preview` with value `YES` to `Info.plist`
+12. add another entry to `Info.plist` with key: `Privacy - Camera Usage Description` and value: `$(PRODUCT_NAME) uses Cameras`
+13. select Runner, Targets -> Runner, then Build Phases -> Embed Frameworks, then hit + and select UnityFramework.framework  

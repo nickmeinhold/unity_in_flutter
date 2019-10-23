@@ -9,6 +9,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_unity_widget:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
